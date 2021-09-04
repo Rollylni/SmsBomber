@@ -11,3 +11,7 @@ php start.php
 
 ## Спойлер
 ![Example](./bomber.jpg)
+
+## Связаться со мной
+  * [VK](https://vk.com/rollylni)
+  * [Telegram](https://t.me/rollylni)
