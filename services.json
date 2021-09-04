@@ -1,0 +1,240 @@
+{
+    "RuTuBe": {
+        "url": "https://rutube.ru/api/accounts/sendpass/phone",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "content": {
+                "phone": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Dozarplati": {
+        "url": "https://online-api.dozarplati.com/rpc",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "json": true,
+            "content": {
+                "id": 1,
+                "jsonrpc": "2.0",
+                "method": "auth.login",
+                "params": {
+                    "phoneNumber": "%phone%"
+                }
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Aramba": {
+        "url": "http://www.aramba.ru/core.php",
+        "format": "standart",
+        "context": {
+            "method": "POST",
+            "content": {
+                "act": "codeRequest",
+                "phone": "%phone%",
+                "l": "URUeww",
+                "p": "URUeww",
+                "name": "URUeww",
+                "email": "URUeww@gmail.com"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "ICQ": {
+        "url": "https://www.icq.com/smsreg/requestPhoneValidation.php",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "content": {
+                "msisdn": "%phone%", 
+                "locale": "en", 
+                "countryCode": "ru",
+                "version": "1", 
+                "k": "ic1rtwz1s1Hj1O0r", 
+                "r": "4676893"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Deli-Time": {
+        "url": "https://api.delitime.ru/api/v2/signup",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "content": {
+                "SignupForm[username]": "%phone%",
+                "SignupForm[device_type]": 3
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "ivi": {
+        "url": "https://api.ivi.ru/mobileapi/user/register/phone/v6",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "content": {
+                "phone": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Yandex.Eda": {
+        "url": "https://eda.yandex/api/v1/user/request_authentication_code",
+        "format": "standart",
+        "context": {
+            "method": "POST",
+            "json": true,
+            "content": {
+                "phone_number": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Youla": {
+        "url": "https://youla.ru/web-api/auth/request_code",
+        "format": "standart",
+        "context": {
+            "method": "POST",
+            "json": true,
+            "content": {
+                "phone": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "MTS-TV": {
+        "url": "https://api.mtstv.ru/v1/users",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "json": true,
+            "content": {
+                "msisdn": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "YouDrive": {
+        "url": "http://youdrive.today/signup/phone",
+        "format": "withoutCountry",
+        "context": {
+            "method": "POST",
+            "content": {
+                "phone": "%phone%",
+                "phone_code": "7"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Karusel": {
+        "url": "https://app.karusel.ru/api/v1/phone/",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "content": {
+                "phone": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Citilink": {
+        "url": "https://www.citilink.ru/registration/confirm/phone/%phone%/",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Utair": {
+        "url": "https://b.utair.ru/api/v1/login/",
+        "format": "standart",
+        "context": {
+            "method": "POST",
+            "json": true,
+            "content": {
+                "login": "%phone%",
+                "confirmation_code": "call_code"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "KFC": {
+        "url": "https://app-api.kfc.ru/api/v1/common/auth/send-validation-sms",
+        "format": "standart",
+        "context": {
+            "method": "POST",
+            "json": true,
+            "content": { 
+                "phone": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    
+    "Qlean": {
+        "url": "https://qlean.ru/clients-api/v2/sms_codes/auth/request_code",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "json": true,
+            "content": {
+                "phone": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Sunlight": {
+        "url": "https://api.sunlight.net/v3/customers/authorization/",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "content": {
+                "phone": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "Tinder": {
+        "url": "https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=%country%",
+        "format": "standart2",
+        "context": {
+            "method": "POST",
+            "content": {
+                "phone_number": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    },
+    
+    "OK": {
+        "url": "https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone",
+        "format": "standart",
+        "context": {
+            "method": "POST",
+            "content": {
+                "st.r.phone": "%phone%"
+            },
+            "user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+    }
+}
