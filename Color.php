@@ -18,7 +18,7 @@ function colorize($text) {
     ];
     
     if (DIRECTORY_SEPARATOR === "\\") { //шиндовс
-        // return str_replace(array_keys($colors), null, $text);
+        return str_replace(array_keys($colors), null, $text);
     }
     return str_replace(array_keys($colors), array_values($colors), $text);
 }
